@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc:
+      branch: master
+      repo: https://gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-firebrick-barb.sh
+        container: qc.acc_crabby-mauve-dugong
+  QC.Doc:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-chartreuse-tiger.sh
+        container: qc.doc_tasty-burgundy-jellyfish
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-malachite-cuttlefish.sh
+        container: qc.doc_hilly-cerise-eleuth
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-plum-frigatebird.sh
+        container: qc.doc_flabby-cinnabar-lynx
+  QC.Lic:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-gamboge-dragonfly.sh
+        container: qc.lic_geeky-wheat-dragonfly
+  QC.Met:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-cinnamon-indri.sh
+        container: qc.met_hasty-wheat-binturong
+  QC.Sec:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-thistle-oriole.sh
+        container: qc.sec_snazzy-tangerine-serval
+  QC.Sty:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-yellow-hornet.sh
+        container: qc.sty_surly-cyan-devil
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-green-kangaroo.sh
+        container: qc.sty_hilly-emerald-worm
+  QC.Ver:
+    repos:
+      gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-indigo-chicken.sh
+        container: qc.ver_cloudy-zucchini-gar
+timeout: 5400
