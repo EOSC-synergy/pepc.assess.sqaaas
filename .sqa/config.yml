@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-firebrick-barb.sh
-        container: qc.acc_crabby-mauve-dugong
+        - /usr/bin/env sh .sqa/script.wheezy-rose-okapi.sh
+        container: qc.acc_sickly-ecru-sheepdog
   QC.Doc:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-chartreuse-tiger.sh
-        container: qc.doc_tasty-burgundy-jellyfish
+        - /usr/bin/env sh .sqa/script.boozy-yellow-catfish.sh
+        container: qc.doc_wimpy-cerise-llama
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-malachite-cuttlefish.sh
-        container: qc.doc_hilly-cerise-eleuth
+        - /usr/bin/env sh .sqa/script.flimsy-heliotrope-squirrel.sh
+        container: qc.doc_flaky-sangria-snake
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-plum-frigatebird.sh
-        container: qc.doc_flabby-cinnabar-lynx
+        - /usr/bin/env sh .sqa/script.ugly-teal-mongoose.sh
+        container: qc.doc_bumpy-silver-corgi
   QC.Lic:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-gamboge-dragonfly.sh
-        container: qc.lic_geeky-wheat-dragonfly
+        - /usr/bin/env sh .sqa/script.clammy-auburn-chihuahua.sh
+        container: qc.lic_muzzy-champagne-lemming
   QC.Met:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-cinnamon-indri.sh
-        container: qc.met_hasty-wheat-binturong
+        - /usr/bin/env sh .sqa/script.crappy-peach-cattle.sh
+        container: qc.met_lumpy-ecru-burmese
   QC.Sec:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-thistle-oriole.sh
-        container: qc.sec_snazzy-tangerine-serval
+        - /usr/bin/env sh .sqa/script.muggy-vermilion-vulture.sh
+        container: qc.sec_homely-ruby-bordeaux
   QC.Sty:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-yellow-hornet.sh
-        container: qc.sty_surly-cyan-devil
+        - /usr/bin/env sh .sqa/script.randy-lemon-dingo.sh
+        container: qc.sty_cheeky-cerulean-starfish
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-green-kangaroo.sh
-        container: qc.sty_hilly-emerald-worm
+        - /usr/bin/env sh .sqa/script.woozy-emerald-albatross.sh
+        container: qc.sty_lousy-cinnamon-moose
   QC.Ver:
     repos:
       gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-indigo-chicken.sh
-        container: qc.ver_cloudy-zucchini-gar
+        - /usr/bin/env sh .sqa/script.craggy-chestnut-dog.sh
+        container: qc.ver_scummy-olive-binturong
 timeout: 5400
